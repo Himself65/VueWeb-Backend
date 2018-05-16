@@ -1,2 +1,3 @@
-# VueWeb-Backend
-VueWeb - 后端模块
+# VueWeb - Backend Part
+
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
