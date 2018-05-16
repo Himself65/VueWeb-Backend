@@ -3,7 +3,7 @@ language:
 python:
   - "3.6"
 script:
-  - manage.py
+  - python manage.py 
 install:
   - pip install -r requirements.txt
 notifications:

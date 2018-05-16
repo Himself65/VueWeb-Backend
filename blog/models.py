@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import absolute_import, unicode_literals
 from django.db import models
+from account import models
 
 
 class Article(models.Model):
