@@ -1,6 +1,6 @@
 # VueWeb - Backend Part
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
+[![Build Status](https://travis-ci.org/Himself65/VueWeb-Backend.svg?branch=master)](https://travis-ci.org/Himself65/VueWeb-Backend)![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
 [Frontend-Part](https://github.com/Himself65/VueWeb)
 
