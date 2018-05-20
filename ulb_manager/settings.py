@@ -38,7 +38,9 @@ VENDOR_APPS = [
     'rest_framework',
 ]
 
-LOCAL_APPS = []
+LOCAL_APPS = [
+    'blog',
+]
 
 INSTALLED_APPS = VENDOR_APPS + LOCAL_APPS
 
@@ -82,6 +84,10 @@ DATABASES = {
         'USER': 'himself65',
         'PASSWORD': 'himself65',
         'HOST': '127.0.0.1',
+        'OPTIONS': {
+            'charset': 'utf8',
+            'use_unicode': True
+        }
     }
 }
 

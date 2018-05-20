@@ -1,8 +1,12 @@
 from django.shortcuts import render
 from django.http import HttpRequest
+from rest_framework import viewsets
 
-# Create your views here.
+# local
+from .serializer import ArticleSerializers
+from .models import Article
 
 
-def about(request):
-    return HttpRequest("Code by Himself65")
+class ArticleViewSet(viewsets.ModelViewSet):
+    queryset = Article.objects.all()
+    serializer_class = ArticleSerializers
