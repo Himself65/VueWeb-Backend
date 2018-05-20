@@ -29,6 +29,7 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 VENDOR_APPS = [
+    'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -37,10 +38,7 @@ VENDOR_APPS = [
     'rest_framework',
 ]
 
-LOCAL_APPS = [
-    'account',
-    'blog',
-]
+LOCAL_APPS = []
 
 INSTALLED_APPS = VENDOR_APPS + LOCAL_APPS
 
