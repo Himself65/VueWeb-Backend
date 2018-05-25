@@ -6,7 +6,8 @@ class Article(models.Model):
     """博客"""
 
     # 作者
-    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    author = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name='author')
 
     title = models.CharField(max_length=50)
 
