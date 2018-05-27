@@ -19,6 +19,9 @@ class Article(models.Model):
 
     update_time = models.DateField(auto_now=True)
 
+    class Meta:
+        ordering = ['-created_time']
+
     def __str__(self):
         return self.title
 
