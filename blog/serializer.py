@@ -4,15 +4,7 @@ from .models import Article
 
 from rest_framework import serializers
 from django.contrib.auth.models import User
-
-
-class UserSerializers(serializers.ModelSerializer):
-    """User数据序列化器"""
-
-    class Meta:
-        model = User
-        fields = ('username', 'first_name', 'last_name', 'is_staff',
-                  'is_superuser')
+from user.serialiszer import UserSerializers
 
 
 class ArticleSerializers(serializers.ModelSerializer):
