@@ -13,7 +13,7 @@ from .serialiszer import UserLoginSerializer, UserRegisterSerializer
 class UserRegisterViewSet(mixins.CreateModelMixin, mixins.UpdateModelMixin,
                           mixins.RetrieveModelMixin, viewsets.GenericViewSet):
     '''
-    用户
+    用户注册API
     '''
     serializer_class = UserRegisterSerializer
     queryset = User.objects.all()
@@ -34,3 +34,9 @@ class UserRegisterViewSet(mixins.CreateModelMixin, mixins.UpdateModelMixin,
 
     def perform_create(self, serializer):
         return serializer.save()
+
+
+class UserLoginViewSet():
+    '''
+    用户登陆API
+    '''
