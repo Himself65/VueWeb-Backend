@@ -8,6 +8,7 @@ class UserProfile(models.Model):
     """扩展User"""
     user = models.OneToOneField(User, on_delete=models.CASCADE)
 
+    # Github账户
     github = models.URLField()
 
     def __unicode__(self):
