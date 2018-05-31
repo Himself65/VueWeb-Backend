@@ -8,7 +8,7 @@ class UserProfile(models.Model):
     """扩展User"""
     user = models.OneToOneField(User, on_delete=models.CASCADE)
 
-    github = models.TextField()
+    github = models.URLField()
 
     def __unicode__(self):
         return self.user.username
