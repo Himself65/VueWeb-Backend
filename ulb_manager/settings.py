@@ -42,6 +42,7 @@ VENDOR_APPS = [
 LOCAL_APPS = [
     'blog',
     'user',
+    'problem',
 ]
 
 INSTALLED_APPS = VENDOR_APPS + LOCAL_APPS

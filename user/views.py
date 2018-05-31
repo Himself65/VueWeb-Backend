@@ -7,7 +7,7 @@ from rest_framework.status import *
 from rest_framework import mixins, viewsets
 
 #local
-from .serialiszer import UserLoginSerializer, UserRegisterSerializer
+from .serialiszer import UserRegisterSerializer
 
 
 class UserRegisterViewSet(mixins.CreateModelMixin, mixins.UpdateModelMixin,
@@ -34,9 +34,3 @@ class UserRegisterViewSet(mixins.CreateModelMixin, mixins.UpdateModelMixin,
 
     def perform_create(self, serializer):
         return serializer.save()
-
-
-class UserLoginViewSet():
-    '''
-    用户登陆API
-    '''

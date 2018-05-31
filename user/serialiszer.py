@@ -6,6 +6,8 @@
 from rest_framework import serializers
 from django.db import models
 from django.contrib.auth.models import User
+# local
+from .models import UserProfile
 
 
 class UserSerializers(serializers.ModelSerializer):
@@ -16,19 +18,25 @@ class UserSerializers(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ('username', 'first_name', 'last_name', 'is_staff',
-                  'is_superuser')
+        fields = ('username', 'is_staff', 'is_superuser')
 
 
-class UserLoginSerializer(serializers.ModelSerializer):
-    """用于用户登陆"""
+class UserProfileSerializers(serializers.ModelSerializer):
+    """
+    UserProfile数据序列化器
+    """
+    user = UserSerializers(many=False, read_only=True)
 
     class Meta:
-        pass
+        model = UserProfile
+        fields = ('user', 'github')
 
 
 class UserRegisterSerializer(serializers.ModelSerializer):
     """用于用户注册"""
+
+    # TODO
+    # 验证码问题
 
     username = serializers.CharField(required=True, allow_blank=False)
     password = serializers.CharField(
