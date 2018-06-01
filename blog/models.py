@@ -7,17 +7,21 @@ class Article(models.Model):
 
     # 作者
     author = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name='author')
+        User,
+        on_delete=models.CASCADE,
+        related_name='author',
+        verbose_name='作者')
 
-    title = models.CharField(max_length=50)
+    title = models.CharField(max_length=50, verbose_name='标题')
 
-    head_img_url = models.URLField(blank=True, null=True)
+    head_img_url = models.URLField(
+        blank=True, null=True, verbose_name='封面图片地址')
 
-    content = models.TextField()
+    content = models.TextField(verbose_name='内容')
 
-    created_time = models.DateField(auto_now_add=True)
+    created_time = models.DateField(auto_now_add=True, verbose_name='创建时间')
 
-    update_time = models.DateField(auto_now=True)
+    update_time = models.DateField(auto_now=True, verbose_name='更新时间')
 
     class Meta:
         ordering = ['-created_time']
